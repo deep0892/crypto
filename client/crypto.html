@@ -35,7 +35,7 @@
                       <td class="cell100 column6 {{bg_red}}">
                         {{percent_change_24h}}%{{#if UP_down percent_change_24h}}<span>&uarr;</span>{{else}}<span>&darr;</span>{{/if}}
                       </td>
-                      <td class="cell100 column7">{{percent_change_7d}}%</td>
+                      <td class="cell100 column7">{{percent_change_7d}}%{{#if UP_down percent_change_7d}}<span>&uarr;</span>{{else}}<span>&darr;</span>{{/if}}</td>
                       <td class="cell100 column8">{{UpdatedSince}}</td>
                     </tr>
                     {{/each}}
