@@ -1,0 +1,26 @@
+<template name="topcoderchalenges1">
+    <div class="crypto">
+        <table>
+          <thead>
+            <tr >
+              <th >Rank</th>
+              <th >name</th>
+              <th >USD</th>
+              <th >Price in BTC</th>
+              <th >% Change in 1hr</th>
+            </tr>
+          </thead>
+          <tbody>
+              {{#each challenges}}
+            <tr >
+              <td >{{name}}</td>
+              <td >{{platforms}}</td>
+              <td >{{createdAt}}</td>
+              <td >{{technologies}}</td>
+              <td >{{reviewType}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+</template>

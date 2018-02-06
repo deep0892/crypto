@@ -9,7 +9,7 @@ Meteor.setInterval(function() {
                 $set: { 
                     name: element.id,
                     symbol: element.symbol,
-                    rank: element.rank,
+                    rank: parseInt(element.rank),
                     price_usd: element.price_usd,
                     price_btc: element.price_btc,
                     '24h_volume_usd': element["24h_volume_usd"],
@@ -17,9 +17,9 @@ Meteor.setInterval(function() {
                     available_supply: element.available_supply,
                     total_supply: element.total_supply,
                     max_supply: element.max_supply,
-                    percent_change_1h: element.percent_change_1h,
-                    percent_change_24h: element.percent_change_24h,
-                    percent_change_7d: element.percent_change_7d,
+                    percent_change_1h: parseFloat(element.percent_change_1h),
+                    percent_change_24h: parseFloat(element.percent_change_24h),
+                    percent_change_7d: parseFloat(element.percent_change_7d),
                     ts: new Date()
                 }
               }, { upsert: true });

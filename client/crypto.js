@@ -1,11 +1,11 @@
 import { Template } from "meteor/templating";
 import { ReactiveVar } from "meteor/reactive-var";
 
-import "./Leads.html";
+//import "./crypto.html";
 
 Template.crypto.helpers({
     CryptoMarketValue: function() {
-        return CryptoMarketValue.find({}).fetch();
+        return CryptoMarketValue.find({},{sort:{rank:1}}).fetch();
     },
     UpdatedSince:function(){
         return moment(this.ts).fromNow();

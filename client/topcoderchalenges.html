@@ -1,0 +1,38 @@
+<template name="topcoderchalenges">
+    <div class="limiter">
+        <div class="container-table100">
+          <div class="wrap-table100">
+            <div class="table100 ver1 m-b-110">
+              <div class="table100-head">
+                <table>
+                  <thead>
+                    <tr class="row100 head">
+                      <th class="cell100 column1">Name</th>
+                      <th class="cell100 column2">Platforms </th>
+                      <th class="cell100 column3">Registration Starts On </th>
+                      <th class="cell100 column4">Registration Ends On</th>
+                      <th class="cell100 column5">Analyse Tone</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="table100-body js-pscroll">
+                <table>
+                  <tbody>
+                      {{#each challenges}}
+                    <tr class="row100 body">
+                      <td class="cell100 column1">{{name}}</td>
+                      <td class="cell100 column2">{{platforms}}</td>
+                      <td class="cell100 column3">{{regstartDate}}</td>
+                      <td class="cell100 column4">{{regEndDate}}</td>
+                      <td class="cell100 column5"><button type="button" id="{{id}}" class="analyse-button" value="{{upcomingPhase.challengeId}}">Analyse Tone</button></td>
+                    </tr>
+                    {{/each}}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</template>
